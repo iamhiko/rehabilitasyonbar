@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 45 29% 90%;  /* Soft krem (F5F1E8) HSL format */
+    --foreground: 25 15% 20%;  /* Koyu kahve text rengi (#4A4238) */
+
+    --primary: 30 15% 58%;     /* #A68F79 - soft kahve */
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 40 20% 72%;      /* #C7BCA1 - vurgu */
+    --secondary: 40 10% 50%;   /* #7D7461 - ikincil vurgu */
+
+    --border: 30 10% 80%;      /* Açık border tonu */
+    --input: 30 10% 80%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 10%;    /* Koyu arka plan dark mode */
+    --foreground: 0 0% 98%;
+
+    --primary: 30 15% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent: 40 20% 72%;
+    --secondary: 40 10% 40%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

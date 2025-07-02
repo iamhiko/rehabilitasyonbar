@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: white;
+  --bg: white;
+}
+
+body {
+  background-color: white !important;
+}
+
+main {
+  background-color: white !important;
+}
+
+.bg-zinc-900 {
+  background-color: white !important;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-content;
+  }
+}
